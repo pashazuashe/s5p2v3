@@ -1,8 +1,0 @@
-﻿  s5p2v3.cpp
-C:\Users\ancap\Documents\гумрф\IV курс\Инструментальные средства ИС\0,2\s5p2v3\s5p2v3\s5p2v3.cpp(26,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\ancap\Documents\гумрф\IV курс\Инструментальные средства ИС\0,2\s5p2v3\s5p2v3\s5p2v3.cpp(47,1): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\ancap\Documents\гумрф\IV курс\Инструментальные средства ИС\0,2\s5p2v3\s5p2v3\s5p2v3.cpp(54,1): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\ancap\Documents\гумрф\IV курс\Инструментальные средства ИС\0,2\s5p2v3\s5p2v3\s5p2v3.cpp(61,1): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\ancap\Documents\гумрф\IV курс\Инструментальные средства ИС\0,2\s5p2v3\s5p2v3\s5p2v3.cpp(68,1): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\ancap\Documents\гумрф\IV курс\Инструментальные средства ИС\0,2\s5p2v3\s5p2v3\s5p2v3.cpp(75,1): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-  s5p2v3.vcxproj -> C:\Users\ancap\Documents\гумрф\IV курс\Инструментальные средства ИС\0,2\s5p2v3\x64\Debug\s5p2v3.exe
