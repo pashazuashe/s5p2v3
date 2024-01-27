@@ -3,138 +3,158 @@
 
 using namespace std;
 
-class MyArray {
+class MyArray
+{
 
 private:
-    vector<float> v;
+    std::vector<float> v;
 
 public:
-    MyArray() {
-
+    MyArray()
+    {
     }
-    MyArray(int arg) {
-        this->v = vector<float>(arg);
+    MyArray(int arg)
+    {
+        this->v = std::vector<float>(arg);
     }
-    float operator [](int index) {
-        if (index < v.size() && index >= 0) {
+    float operator[](int index)
+    {
+        if (index < v.size() && index >= 0)
+        {
             return v[index];
         }
         else
             throw 0;
     }
-    int GetSize() {
+    int GetSize()
+    {
         return v.size();
     }
-    void SetValue(int index, float value) {
+    void SetValue(int index, float value)
+    {
         v[index] = value;
     }
-    void PrintMyArray() {
-        for (float i : v) {
-            cout << i << " ";
+    void PrintMyArray()
+    {
+        for (float i : v)
+        {
+            std::cout << i << " ";
         }
-        cout << '\n';
+        std::cout << '\n';
     }
-    bool operator ==(MyArray& v2) {
+    bool operator==(MyArray &v2)
+    {
         bool result = true;
-        for (int i = 0; i < v.size(); i++) {
-            if (v[i] != v2[i]) {
+        for (int i = 0; i < v.size(); i++)
+        {
+            if (v[i] != v2[i])
+            {
                 result = false;
             }
         }
         return result;
     }
-    MyArray operator +(MyArray& v2) {
+    MyArray operator+(MyArray &v2)
+    {
         MyArray result(v.size());
-        for (int i = 0; i < v.size(); i++) {
+        for (int i = 0; i < v.size(); i++)
+        {
             result.SetValue(i, v[i] + v2[i]);
         }
         return result;
     }
-    MyArray operator -(MyArray& v2) {
+    MyArray operator-(MyArray &v2)
+    {
         MyArray result(v.size());
-        for (int i = 0; i < v.size(); i++) {
+        for (int i = 0; i < v.size(); i++)
+        {
             result.SetValue(i, v[i] - v2[i]);
         }
         return result;
     }
-    MyArray operator *(MyArray& v2) {
+    MyArray operator*(MyArray &v2)
+    {
         MyArray result(v.size());
-        for (int i = 0; i < v.size(); i++) {
+        for (int i = 0; i < v.size(); i++)
+        {
             result.SetValue(i, v[i] * v2[i]);
         }
         return result;
     }
-    MyArray operator *(float value) {
+    MyArray operator*(float value)
+    {
         MyArray result(v.size());
-        for (int i = 0; i < v.size(); i++) {
+        for (int i = 0; i < v.size(); i++)
+        {
             result.SetValue(i, v[i] * value);
         }
         return result;
     }
-    MyArray operator /(MyArray& v2) {
+    MyArray operator/(MyArray &v2)
+    {
         MyArray result(v.size());
-        for (int i = 0; i < v.size(); i++) {
+        for (int i = 0; i < v.size(); i++)
+        {
             result.SetValue(i, v[i] / v2[i]);
         }
         return result;
     }
-
 };
 
 int main()
 {
     int size = 0;
 
-    cin >> size;
+    std::cin >> size;
 
     MyArray v1(size);
     MyArray v2(size);
 
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++)
+    {
         float temp = 0;
-        cin >> temp;
+        std::cin >> temp;
         v1.SetValue(i, temp);
     }
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++)
+    {
         float temp = 0;
-        cin >> temp;
+        std::cin >> temp;
         v2.SetValue(i, temp);
     }
 
     float multi = 0;
-    cin >> multi;
+    std::cin >> multi;
 
-    cout << "massiv1= ";
+    std::cout << "massiv1= ";
     v1.PrintMyArray();
 
-    cout << "massiv2= ";
+    std::cout << "massiv2= ";
     v2.PrintMyArray();
 
     MyArray v3 = v1 + v2;
-    cout << "summa= ";
+    std::cout << "summa= ";
     v3.PrintMyArray();
     v3 = v1 - v2;
-    cout << "raznost= ";
+    std::cout << "raznost= ";
     v3.PrintMyArray();
     v3 = v1 * v2;
-    cout << "proizv= ";
+    std::cout << "proizv= ";
     v3.PrintMyArray();
     v3 = v1 / v2;
-    cout << "delenie= ";
+    std::cout << "delenie= ";
     v3.PrintMyArray();
     v3 = v1 * multi;
-    cout << "mult chislo massiv1= ";
+    std::cout << "mult chislo massiv1= ";
     v3.PrintMyArray();
     v3 = v2 * multi;
-    cout << "mult chislo massiv2= ";
+    std::cout << "mult chislo massiv2= ";
     v3.PrintMyArray();
-    
-    if (v1 == v2)
-        cout << "massivy ravny";
-    else
-        cout << "massivy ne ravny";
 
+    if (v1 == v2)
+        std::cout << "massivy ravny";
+    else
+        std::cout << "massivy ne ravny";
 
     return 0;
 }
-
